@@ -280,8 +280,8 @@ class FeedsController extends AppController
                 if (empty($feed['Feed']['lookup_visible'])) {
                     $feed['Feed']['lookup_visible'] = 0;
                 }
-                if (empty($feed['Feed']['locked'])) {
-                    $feed['Feed']['locked'] = 0;
+                if (empty($feed['Feed']['lock_events'])) {
+                    $feed['Feed']['lock_events'] = 0;
                 }
                 if (empty($feed['Feed']['input_source'])) {
                     $feed['Feed']['input_source'] = 'network';
@@ -383,7 +383,7 @@ class FeedsController extends AppController
                 'headers',
                 'orgc_id',
                 'fixed_event',
-                'locked'
+                'lock_events'
             ],
             'afterFind' => function (array $feed) {
                 $feed['Feed']['settings'] = json_decode($feed['Feed']['settings'], true);

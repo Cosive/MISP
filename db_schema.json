@@ -3480,7 +3480,7 @@
                 "extra": ""
             },
             {
-                "column_name": "locked",
+                "column_name": "lock_events",
                 "is_nullable": "NO",
                 "data_type": "tinyint",
                 "character_maximum_length": null,
